@@ -1,0 +1,24 @@
+
+
+div.heroImg1{
+    width:60%;
+}
+div.heroImg2{
+    width:20%;
+}
+
+div.heroImg3{
+    width:20%;
+}
+.heroImg2:hover{
+    width:60%;
+}
+.heroImg3:hover{
+    width:60%;
+}
+div.heroImg3:hover div.heroImg1{
+    width:20% !important;
+}
+div.heroImg2:hover div.heroImg1{
+    width:20% !important;
+}
