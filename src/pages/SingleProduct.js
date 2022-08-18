@@ -48,7 +48,7 @@ function SingleProduct() {
   }
   return (
     <>
-      <div className="container mx-auto md:w-5/6 pt-5 pb-7 ">
+      <div className="container mx-auto md:w-5/6 pt-5 pb-7 md:mx-0">
         {loading ? (
           <div className="flex justify-center w-full my-10">
             <Bars
@@ -69,13 +69,13 @@ function SingleProduct() {
                 <div>
                   <InnerImageZoom src={image?.large?.url} zoomSrc={image?.full?.url} zoomType="hover" />
                 </div>
-                <div className="flex flex-wrap gap-2 mt-5">
+                <div className="flex flex-wrap gap-2 mt-5 mx-4 md:mx-0">
                   {product?.images.map((image, index) => (
                     <img onClick={() => setImage(image?.thumbnails)} src={image?.thumbnails?.small.url} alt={product?.name} className="w-20  rounded cursor-pointer" key={index} />
                   ))}
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:pl-5 capitalize" >
+              <div className="w-full md:w-1/2 md:pl-5 capitalize md:mx-0 mx-4 pt-4 md:pt-0" >
                 <h1 className="text-xl md:text-3xl font-semibold">{product?.name}</h1>
                 <span className="text-sm text-gray-500 font-semibold">{product?.company}</span>
 
@@ -102,16 +102,16 @@ function SingleProduct() {
                 </div>
 
                 <p className="text-md mt-3 md:text-xl text-[#bb8e1d]">${product?.price?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-                <div className="">
+                <div className="md:block flex justify-center ">
                   {chekItemExist (id) ? (
-                  <button className='mt-5 rounded block py-2 px-12 text-white font-semibold bg-black text-base'>Already Added</button>
+                  <button className='mt-5 rounded block py-2 px-8 md:px-12 text-white font-semibold bg-black text-base'>Already Added</button>
                   ) : (
-                  <button onClick={addtoBasket} className='mt-5 rounded block py-2 px-12 text-white font-semibold bg-black text-base'>Add to Cart</button>
+                  <button onClick={addtoBasket} className=' mt-5 rounded block py-2 px-8 md:px-12 text-white font-semibold bg-black text-base'>Add to Cart</button>
                   )}
                 </div>
               </div>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 mx-4 md:mx-0">
               <h4 className="text-lg font-bold border-b mb-3">Description</h4>
               <p className="text-gray-500">{product?.description}</p>
             </div>

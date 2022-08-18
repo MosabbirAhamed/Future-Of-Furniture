@@ -5,6 +5,7 @@ import RouterWrapper from "./RouterWrapper";
 import SingleProduct from "./SingleProduct";
 import Products from "../components/Products";
 import LoginPage from "./LoginPage";
+import Collection from "./Collection";
 
 function Pages() {
   return (
@@ -16,6 +17,7 @@ function Pages() {
           <Route path="products/:id" element={<SingleProduct />} />
           <Route path="product" element={<Products />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="collection" element={<Collection />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />

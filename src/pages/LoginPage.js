@@ -27,11 +27,16 @@ function LoginPage() {
         auth.createUserWithEmailAndPassword(email, password)
             .catch(err => alert(err.message));
     }
+    // console.log(user.photoURL)
     return (
         <div className="bg-[#cee9ff70] relative flex flex-col justify-center min-h-screen overflow-hidden">
             {user ? (
                 <div className="w-full  p-6 m-auto bg-white rounded-md shadow-xl md:max-w-xl">
-                    <h1 className="text-3xl font-semibold text-center text-[#079AF7] uppercase">{user.displayName}</h1>
+                    <div className="flex flex-col justify-center items-center gap-4 pb-8">
+                        <img className="w-24 h-24 border rounded-full" src={user?.photoURL} alt={user.displayName} />
+                        <h1 className="text-3xl font-semibold text-[#079AF7] uppercase">{user.displayName}</h1>
+                        <p className="text-lg text-slate-600">{user.email}</p>
+                    </div>
                     <div className="flex mt-4 gap-x-2">
                         <button onClick={logOut} type="button" className="bg-[#079bf71e]  flex items-center gap-4 justify-center w-full p-2 border border-gray-400 rounded-md" >
                             <span className="font-semibold text-gray-800">Log Out</span>
