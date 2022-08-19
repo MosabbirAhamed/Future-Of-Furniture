@@ -48,7 +48,7 @@ function SingleProduct() {
   }
   return (
     <>
-      <div className="container mx-auto md:w-5/6 pt-5 pb-7 md:mx-0">
+      <div className="container mx-auto md:w-5/6 pt-5 pb-7">
         {loading ? (
           <div className="flex justify-center w-full my-10">
             <Bars
