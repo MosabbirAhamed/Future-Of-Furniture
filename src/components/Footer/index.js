@@ -44,9 +44,9 @@ function Footer() {
             </div>
 
             <div className="flex item-center pt-4 gap-4">
-              <a className="hover:text-white" href="https://www.facebook.com/mosabbir.ahammed" target="_blank" rel="noopener noreferrer"><RiFacebookFill size={22} /></a>
-              <a className="hover:text-white" href="https://www.instagram.com/mosabbir_ahamed/" target="_blank" rel="noopener noreferrer"><FiInstagram size={22} /></a>
-              <a className="hover:text-white" href="https://twitter.com/ahamed_mosabbir" target="_blank" rel="noopener noreferrer"><AiOutlineTwitter size={22} /></a>
+              <a className="hover:text-white" href="https://www.facebook.com/mosabbir.ahammed" target="_blank" rel="noreferrer"><RiFacebookFill size={22} /></a>
+              <a className="hover:text-white" href="https://www.instagram.com/mosabbir_ahamed/" target="_blank" rel="noreferrer"><FiInstagram size={22} /></a>
+              <a className="hover:text-white" href="https://twitter.com/ahamed_mosabbir" target="_blank" rel="noreferrer"><AiOutlineTwitter size={22} /></a>
             </div>
           </div>
 

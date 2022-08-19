@@ -1,11 +1,11 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header/"
 import Footer from "../components/Footer/"
 import CartDrawer from '../components/CartDrawer';
-import { useEffect } from 'react';
-import { auth } from '../utils/firebase';
-import { useDispatch } from 'react-redux';
-import { updateUser } from '../redux/slices/authSlice';
+import { useEffect } from "react";
+import { auth } from "../utils/firebase";
+import { useDispatch } from "react-redux";
+import { updateUser } from "../redux/slices/authSlice";
 
 
 
@@ -23,7 +23,8 @@ function RouterWrapper() {
         return () => {
             unsubscribe()
         }
-    }, [])
+    }, [dispatch]);
+
 
     return (
         <>
